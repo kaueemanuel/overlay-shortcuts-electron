@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+  <title>Overlay de Atalhos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra para arrastar a janela -->
+    <div class="actions">
+      <div id="drag-bar">Mover</div>
+      <div id="close-button">Fechar</div>
+    </div>
+
+    <!-- Onde os botões de atalho serão inseridos -->
+    <div id="button-container"></div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+
+</html>

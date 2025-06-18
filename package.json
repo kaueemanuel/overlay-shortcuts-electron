@@ -1,0 +1,36 @@
+{
+  "name": "overlay-shortcuts-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.kaueemanuel.overlayshortcuts",
+    "nodeGypRebuild": false,
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "style.css"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12",
+    "electron-reloader": "^1.2.3"
+  },
+  "dependencies": {
+    "@hurdlegroup/robotjs": "^0.12.3"
+  }
+}

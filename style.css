@@ -1,0 +1,80 @@
+/* style.css */
+body,
+html {
+  background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden; /* Evita barras de rolagem */
+  scale: 0.9; /* Reduz o tamanho da janela para 80% */
+}
+
+.container {
+  background-color: rgba(30, 30, 30, 0.8); /* Fundo semi-transparente para o container */
+  border-radius: 10px;
+  padding: 10px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#app-container {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+#drag-bar,
+#close-button {
+  height: 20px;
+  width: 100%;
+  background-color: #313131;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: move;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  /* ESSENCIAL: Define esta área como arrastável */
+  -webkit-app-region: drag;
+}
+
+#close-button {
+  background-color: #f44336; /* Vermelho para o botão de fechar */
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  -webkit-app-region: no-drag;
+}
+
+#button-container {
+  display: flex;
+  gap: 8px;
+}
+
+.shortcut-btn {
+  background-color: #313131;
+  border: none;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  transition: background-color 0.2s;
+  /* ESSENCIAL: Garante que os botões sejam clicáveis e não arrastem a janela */
+  -webkit-app-region: no-drag;
+}
+
+.shortcut-btn:hover {
+  background-color: #666;
+}
+
+.shortcut-btn:active {
+  background-color: #4caf50; /* Verde ao clicar */
+}
